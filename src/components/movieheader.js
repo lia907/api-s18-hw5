@@ -22,13 +22,13 @@ class MovieHeader extends Component {
                     </Navbar.Header>
                     <Nav>
                         <LinkContainer to="/movielist">
-                            <NavItem eventKey={1} disabled={!this.props.loggedIn}>Movie List </NavItem>
+                            <NavItem eventKey={1} disabled={!this.props.loggedIn}>Movie List</NavItem>
                         </LinkContainer>
                         <LinkContainer to={'/movie/'+ (this.props.selectedMovie ? this.props.selectedMovie.title : '')}>
                             <NavItem eventKey={2} disabled={!this.props.loggedIn}>Movie Detail</NavItem>
                         </LinkContainer>
                         <LinkContainer to="/signin">
-                            <NavItem eventKey={3}>{this.props.loggedIn ? <button onClick={this.logout.bind(this)}>Logout</button> : 'Login'}</NavItem>
+                            <NavItem eventKey={3}>{this.props.loggedIn ? <button onClick={this.logout.bind(this)}>Log Out</button> : 'Login'}</NavItem>
                         </LinkContainer>
                     </Nav>
                 </Navbar>

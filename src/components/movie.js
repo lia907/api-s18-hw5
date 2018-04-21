@@ -70,7 +70,7 @@ class Movie extends Component {
                     <Panel.Heading>Movie Detail</Panel.Heading>
                     <Panel.Body><Image className="image" src={currentMovie.imageUrl} thumbnail /></Panel.Body>
                     <ListGroup>
-                        <ListGroupItem><b>{currentMovie.title}</b></ListGroupItem>
+                        <ListGroupItem><h4>{currentMovie.title}</h4></ListGroupItem>
                         <ListGroupItem><ActorInfo actors={currentMovie.actors} /></ListGroupItem>
                         <ListGroupItem><h4><Glyphicon glyph={'star'} /> {currentMovie.avgRating} </h4></ListGroupItem>
                     </ListGroup>
