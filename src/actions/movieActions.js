@@ -83,7 +83,8 @@ export function submitReview(movieTitle, data){
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem('token')
             },
             body: JSON.stringify(data),
             mode: 'cors'})
@@ -93,9 +94,9 @@ export function submitReview(movieTitle, data){
                 }
                 return response.json;
             })
-            // .then( (res) => {
-            //     dispatch(reviewInserted(movieTitle));
-            // })
+            .then( (res) => {
+                dispatch(fetchMovie(movieTitle));
+            })
             .catch( (e) => console.log(e) );
     }
 }

@@ -70,7 +70,7 @@ class Movie extends Component {
                     <Panel.Heading>Movie Detail</Panel.Heading>
                     <Panel.Body><Image className="image" src={currentMovie.imageUrl} thumbnail /></Panel.Body>
                     <ListGroup>
-                        <ListGroupItem><h2>{currentMovie.title}</h2></ListGroupItem>
+                        <ListGroupItem><h1>{currentMovie.title}</h1></ListGroupItem>
                         <ListGroupItem><ActorInfo actors={currentMovie.actors} /></ListGroupItem>
                         <ListGroupItem><h4><Glyphicon glyph={'star'} /> {currentMovie.avgRating} </h4></ListGroupItem>
                     </ListGroup>
@@ -93,6 +93,7 @@ class Movie extends Component {
                             <FormControl onChange={this.updateDetails} value={this.state.details.review} type="text" placeholder="Review" />
                         </Col>
                     </FormGroup>
+
                     <FormGroup controlId="rating">
                         <Col componentClass={ControlLabel} sm={2}>
                             Rating
@@ -101,6 +102,7 @@ class Movie extends Component {
                             <FormControl onChange={this.updateDetails} value={this.state.details.rating} type="number" placeholder="Rating from 1 to 5" />
                         </Col>
                     </FormGroup>
+
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
                             <Button onClick={this.review}>Submit</Button>
